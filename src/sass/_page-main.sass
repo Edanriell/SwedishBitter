@@ -1,0 +1,51 @@
+@import "page-main-promo"
+@import "page-main-statistics"
+@import "page-main-symptoms"
+@import "page-main-success-secret"
+@import "page-main-bonuses"
+@import "page-main-composition"
+@import "page-main-quality"
+
+.button-fade-in
+  -webkit-animation: button-fade-in 0.25s ease-in-out both
+  animation: button-fade-in 0.25s ease-in-out both
+@-webkit-keyframes button-fade-in 
+  0% 
+    -webkit-transform: translateZ(-80px)
+    transform: translateZ(-80px)
+    opacity: 0
+  100% 
+    -webkit-transform: translateZ(0)
+    transform: translateZ(0)
+    opacity: 1
+@keyframes button-fade-in 
+  0% 
+    -webkit-transform: translateZ(-80px)
+    transform: translateZ(-80px)
+    opacity: 0
+  100% 
+    -webkit-transform: translateZ(0)
+    transform: translateZ(0)
+    opacity: 1
+.button-fade-out
+  -webkit-animation: button-fade-out 0.25s ease-in-out both
+  animation: button-fade-out 0.25s ease-in-out both
+@-webkit-keyframes button-fade-out 
+  0% 
+    -webkit-transform: perspective(600px) translateZ(0)
+    transform: perspective(600px) translateZ(0)
+    opacity: 1
+  100% 
+    -webkit-transform: perspective(600px) translateZ(-80px)
+    transform: perspective(600px)translateZ(-80px)
+    opacity: 0
+@keyframes button-fade-out 
+  0% 
+    -webkit-transform: perspective(600px) translateZ(0)
+    transform: perspective(600px) translateZ(0)
+    opacity: 1
+  100% 
+    -webkit-transform: perspective(600px) translateZ(-80px)
+    transform: perspective(600px) translateZ(-80px)
+    opacity: 0
+  

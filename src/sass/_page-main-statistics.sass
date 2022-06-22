@@ -1,0 +1,46 @@
+.statistics
+  &__statistics-list
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    padding-left: 70px
+    padding-right: 25px
+    padding-top: 140px
+    &__statistics-item
+      position: relative
+      &:nth-child(1),
+      &:nth-child(4)
+        max-width: 210px
+      &:nth-child(2),
+      &:nth-child(3)
+        max-width: 190px
+      &:nth-child(1) > dt
+        max-width: 90px
+      &:nth-child(2) > dt
+        max-width: 100px
+      &:nth-child(3) > dt
+        max-width: 152px
+      &:nth-child(4) > dt
+        max-width: 102px
+      &::before
+        position: absolute
+        content: ''
+        width: 25px
+        height: 25px
+        top: -30px
+        left: -41px
+        background: no-repeat url("../img/icons/circle.svg")
+      &__indicator
+        font-family: "Montserrat-SemiBold", sans-serif
+        font-size: 3rem
+        line-height: 2.4rem
+        color: #a4c58c
+        border-bottom: 4px solid #a4c58c
+        padding-bottom: 10px
+        margin-bottom: 29px
+        span
+          font-size: 1.8rem
+      &__description
+        font-family: inherit
+        font-size: 1.6rem
+        line-height: 2.4rem 

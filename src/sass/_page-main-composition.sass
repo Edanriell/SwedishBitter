@@ -1,0 +1,152 @@
+@for $i from 1 through 6
+  .composition__components__components-list__item:nth-child(#{$i}):before
+    content: '— 0#{$i}'
+
+=textOnHover($hover: true)
+  @if $hover
+    p
+      display: block
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      font-family: "Montserrat-Bold", sans-serif
+      font-size: 1.4rem
+      line-height: 2rem
+      font-weight: 700
+      color: #FFF
+      z-index: 2
+      text-align: center
+      animation-name: blockFadeIn
+      animation-duration: 0.3s
+
+.composition
+  display: flex
+  &__components
+    width: 570px
+    margin-right: 40px
+    margin-top: 30px
+    &__header
+      font-family: "Montserrat-Bold", sans-serif
+      font-weight: 400
+      font-size: 4rem
+      line-height: 5rem
+      width: 480px
+      margin-bottom: 50px
+    &__components-list
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      &__item
+        width: 270px
+        height: 270px
+        position: relative
+        cursor: pointer
+        margin-top: 30px
+        &:hover
+          +textOnHover($hover: true)
+        &:before
+          position: absolute
+          font-family: "Montserrat-Bold", sans-serif
+          writing-mode: vertical-rl
+          text-orientation: mixed
+          transform: rotate(180deg)
+          font-size: 1.4rem
+          line-height: 2.4rem
+          color: #a4c58c
+          margin: 15px 0 0 15px
+          top: 0
+          left: 0
+        &:hover:after
+          content: ''
+          position: absolute
+          margin: 20px
+          top: 0
+          left: 0
+          width: 230px
+          height: 229px
+          background: no-repeat url("../img/hover-effect.png") center
+          animation-name: blockFadeIn
+          animation-duration: 0.3s
+        &:nth-child(1) article > p
+          width: 200px
+        &:nth-child(2) article > p
+          width: 130px
+        &:nth-child(3) article > p
+          width: 100px
+        &:nth-child(4) article > p
+          width: 140px
+        &:nth-child(5) article > p
+          width: 70px
+        &:nth-child(6) article > p
+          width: 150px
+        &__header
+          position: absolute
+          writing-mode: vertical-rl
+          text-orientation: mixed
+          transform: rotate(180deg)
+          font-size: 1.4rem
+          line-height: 2.4rem
+          color: #a4c58c
+          margin: 0 15px 15px 0
+          right: 0
+          bottom: 0
+        &__image
+          vertical-align: middle
+          max-width: 100%
+          height: auto
+        &__description
+          display: none
+          width: 300px
+          &__secret
+            display: block
+            position: absolute
+            left: 50px !important
+            top: 120px !important
+            font-family: "Montserrat-Bold", sans-serif
+            font-size: 1.4rem
+            line-height: 2.2rem !important
+            width: 98px !important
+            color: #000 !important
+            text-transform: uppercase
+            font-weight: 700
+            text-align: left !important
+            transform: none !important
+            z-index: 0 !important
+  &__description
+    width: 530px
+    margin-left: 40px
+    position: relative
+    button
+      width: 350px
+      height: 60px
+      bottom: 0
+      right: 0
+      position: absolute
+      padding-left: 20px
+    &__description-list
+      margin-right: 15px
+      &__item
+        font-size: 1.6rem
+        line-height: 2.2rem
+        font-weight: 400
+        display: flex
+        margin-top: 35px
+        &:first-child
+          margin-top: 0
+        &:last-child
+          margin-top: 40px
+        &:before
+          content: ''
+          width: 7px
+          height: 22px
+          flex-grow: 0
+          flex-shrink: 0
+          background: no-repeat url("../img/icons/dot.svg") center
+          margin-right: 16px
+          margin-left: 20px
+@keyframes blockFadeIn
+  0%
+    opacity: 0%
+  100%
+    opacity: 100%

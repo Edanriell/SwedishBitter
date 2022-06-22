@@ -1,0 +1,75 @@
+@for $i from 1 through 3
+  .bonus__bonus-list__item:nth-child(#{$i}) article
+    &:before
+      content: '0#{$i}'
+    
+.bonus
+  background: no-repeat url("../img/green-background-small.png") center 277px
+  &__wrapper
+    padding-bottom: 276px
+  &__header
+    font-family: "Montserrat-Bold", sans-serif
+    font-style: normal // type in main sass
+    font-weight: 700
+    font-size: 4rem
+    line-height: 5rem
+    width: 440px
+    margin: 210px 0 52px 0
+  &__bonus-list
+    display: flex
+    background: #FFF
+    padding: 31px 15px 31px 15px
+    flex-wrap: wrap
+    &__item
+      &:nth-child(1) > article > img
+        margin-top: 89px
+      &:nth-child(2) > article > img
+        margin-top: 94px
+      &:nth-child(3) > article > img
+        margin-top: 87px
+      &:nth-child(1) > article > h3
+        margin-top: 42px
+      &:nth-child(2) > article > h3
+        margin-top: 52px
+      &:nth-child(3) > article > h3
+        margin-top: 57px
+      &:nth-child(1) > article::before
+        top: 35.5%
+        left: 29%
+      &:nth-child(2) > article::before
+        top: 35%
+        left: 24%
+      &:nth-child(3) > article::before
+        top: 35%
+        left: 24%
+      &:first-child > article
+        margin: 0
+      &__wrapper
+        display: flex
+        flex-direction: column
+        position: relative
+        width: 370px
+        height: 330px
+        border: 1px solid #e4eddc
+        margin-left: 13px
+        &::before
+          font-family: "Montserrat-Black", sans-serif
+          font-size: 15rem
+          line-height: 2rem
+          position: absolute
+          display: block
+          color: #f7f9f3
+          z-index: 1
+      &__header
+        order: 2
+        font-family: "Montserrat-Bold", sans-serif
+        font-weight: 700
+        font-size: 1.4rem
+        line-height: 2rem
+        text-transform: uppercase
+        align-self: center
+        z-index: 2
+      &__image
+        order: 1
+        align-self: center
+        z-index: 2

@@ -1,0 +1,45 @@
+.main-footer
+  display: flex
+  align-items: center
+  padding-top: 35px
+  padding-bottom: 35px
+  &__logotype
+    width: 198px
+    height: 29px
+    margin-right: 85px
+  &__footer-nav
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    width: 615px
+    &__item
+      margin-left: 15px
+      &__link
+        text-decoration: underline
+        font-size: 1.2rem
+        line-height: 2.3rem
+        color: #9a9a9a
+        transition: all 0.3s ease-in-out
+        &:hover
+          color: #000
+          text-decoration: none
+  &__contact
+    margin-left: auto
+    text-align: right
+    &__phone
+      display: flex
+      font-family: "Montserrat-Medium", sans-serif
+      color: inherit
+      font-size: 2rem
+      line-height: 2.3rem
+      align-items: center
+      &:before
+        content: ''
+        width: 15px
+        height: 15px
+        background: no-repeat url('../img/icons/phone.svg') center
+        margin: 0 11px 0 70px
+      &__phone-text
+        color: #9a9a9a
+        font-size: 1.2rem
+        line-height: 1.8rem

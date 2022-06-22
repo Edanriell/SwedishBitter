@@ -1,0 +1,103 @@
+@for $i from 1 through 7
+  .symptoms__symptoms-list__item:nth-child(#{$i}):before 
+    content: '0#{$i}.'
+  
+.symptoms
+  background: url('../img/green-background.png') no-repeat center 380px
+  &__wrapper
+    display: flex
+    position: relative
+  &__header
+    position: absolute
+    top: 240px
+    left: 15px
+    font-family: "Montserrat-Bold", sans-serif
+    font-size: 4rem
+    line-height: 5rem
+    color: #303030
+    max-width: 450px
+  &__symptoms-list
+    flex: 1 1 57.2%
+    margin-top: 380px
+    font-family: "Montserrat-SemiBold", sans-serif
+    padding-right: 20px
+    &__item
+      border-bottom: 1px solid #e6efde
+      font-size: 1.4rem
+      line-height: 2rem
+      color: #303030
+      height: 70px
+      display: flex
+      align-items: center
+      &:first-child > button
+        width: 100% 
+        span
+          display: block
+          width: 500px
+      button
+        width: 100%
+        text-align: left
+        cursor: pointer
+        height: 69px
+        background: transparent
+        span
+          display: block
+          width: 280px
+      &:nth-child(6),
+      &:nth-child(7)
+        height: 80px
+      &:nth-child(6) > button,
+      &:nth-child(7) > button
+        height: 79px
+      &:before
+        width: 18px
+        height: 20px
+        color: #a4c58c
+        font-size: 1.4rem
+        line-height: 2rem
+        margin-right: 23px
+      &:hover:after
+        content: ''
+        width: 8px
+        height: 14px
+        background: no-repeat url('../img/icons/small-arrow.svg') center
+        justify-self: flex-end
+        margin-right: 22px
+        animation-name: arrowFadeIn
+        animation-duration: 0.60s
+  &__symptoms-map
+    flex: 1 1 42.8%
+    &__image
+      margin-top: 200px
+      width: 500px
+      height: 689px
+    .btn
+      margin-top: 51px
+      height: 70px
+.fade-in-fwd 
+  webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.455, 0.030, 0.515, 0.955) both
+  animation: fade-in-fwd 0.6s cubic-bezier(0.455, 0.030, 0.515, 0.955) both
+@-webkit-keyframes fade-in-fwd
+  0% 
+    -webkit-transform: perspective(800px) translateZ(-80px)
+    transform: perspective(800px) translateZ(-80px)
+    opacity: 0
+  100%
+    -webkit-transform: perspective(800px) translateZ(0)
+    transform: perspective(800px) translateZ(0)
+    opacity: 1
+@keyframes fade-in-fwd
+  0% 
+    -webkit-transform: perspective(800px) translateZ(-80px)
+    transform: perspective(800px) translateZ(-80px)
+    opacity: 0
+  100% 
+    -webkit-transform: perspective(800px) translateZ(0)
+    transform: perspective(800px) translateZ(0)
+    opacity: 1
+@keyframes arrowFadeIn
+  0%
+    opacity: 0%
+  100%
+    opacity: 100%
+    
