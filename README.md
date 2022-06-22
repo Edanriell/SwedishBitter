@@ -1,2 +1,2 @@
-# Skincare
-![Skincare](https://github.com/Edanriell/oldProjects-2/blob/master/AnimatedText/skincare.png?raw=true)
+# SwedishBitter
+![SwedishBitter](https://github.com/Edanriell/SwedishBitter/blob/master/swedishBitter.png?raw=true)
